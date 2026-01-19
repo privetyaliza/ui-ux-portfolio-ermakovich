@@ -1,0 +1,16 @@
+:root {
+  --header-height: 60px;
+  --bg-color: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: var(--bg-color);
+}
+
+/* Push content down so it isn't hidden behind the fixed header */
+.content-area {
+  padding-top: var(--header-height);
+  min-height: 80vh; /* Ensures footer stays at bottom if content is short */
+}
