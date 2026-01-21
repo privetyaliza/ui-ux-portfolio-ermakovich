@@ -1,38 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import "../../styles/Header.css";
 
-const Header = () => {
-  const headerStyle = {
-    position: 'fixed',
-    top: 0,
-    width: '100%',
-    height: '60px',
-    backgroundColor: '#333',
-    color: 'white',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between', // Spreads logo and nav apart
-    padding: '0 2rem',
-    zIndex: 1000,
-    boxSizing: 'border-box'
-  };
-
-  const linkStyle = {
-    color: 'white',
-    textDecoration: 'none',
-    marginLeft: '20px',
-    fontSize: '1.2rem'
-  };
-
+export function Header() {
   return (
-    <header style={headerStyle}>
-      <div style={{ fontWeight: 'bold', fontSize: '1.5rem' }}>My Portfolio</div>
-      <nav>
-        <Link to="/" style={linkStyle}>Home</Link>
-        <Link to="/harvest" style={linkStyle}>Harvest Case Study</Link>
+    <header className="header-container">
+      {/* Home link targets the top of the page */}
+      <a href="#" className="nav-link">
+        Home
+      </a>
+
+      {/* Navigation group on the right */}
+      <nav className="nav-group">
+        <a href="#case-studies" className="nav-link">
+          Case studies
+        </a>
+        <a href="#contact" className="nav-link">
+          Contact
+        </a>
       </nav>
     </header>
   );
-};
-
-export default Header;
+}

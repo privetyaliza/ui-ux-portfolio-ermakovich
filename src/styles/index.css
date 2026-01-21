@@ -1,16 +1,92 @@
-:root {
-  --header-height: 60px;
-  --bg-color: #ffffff;
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap');
+
+/* 1. Target EVERYTHING in the chain */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  font-family: sans-serif;
-  background-color: var(--bg-color);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #ffffff; 
+  /* Remove min-height here, we handled it above */
 }
 
-/* Push content down so it isn't hidden behind the fixed header */
-.content-area {
-  padding-top: var(--header-height);
-  min-height: 80vh; /* Ensures footer stays at bottom if content is short */
+/* 2. Your Main Wrapper */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  
+  /* Use min-height 100% to ensure it grows */
+  min-height: 100%; 
+  
+  padding-top: 0;
+  box-sizing: border-box;
+}
+
+.nav-group {
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: var(--primary-text);
+  font-size: 16px;
+  /* font-weight: 500; */
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 1px; 
+  background-color: currentColor;
+  transition: width 0.25s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent; 
+
+  padding: 5vh 5vw;
+  box-sizing: border-box;
+}
+
+.footer-container {
+  flex-shrink: 0;
+  position: relative; 
+  width: 100%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  background-color: rgb(255, 255, 255); /* Footer usually needs a solid fill to cover content */
+  padding: 32px 5vw;
+  box-sizing: border-box;
+  /* margin-top: 60px;  */
+  margin-top: 0;
+}
+
+.container-readable {
+    width: clamp(300px, 66%, 1440px); /* Matches your project width */
+    margin: 0 auto; /* Centers the content */
 }

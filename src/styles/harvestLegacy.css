@@ -49,11 +49,17 @@
 
 & {
     /* width: clamp(300px, 55%, 1440px);
-    margin: 0 auto; */
-    font-family: 'Noto Sans', sans-serif;
+    /* 1. Ensure the background fills the entire screen height */
+    min-height: 100vh; 
+    padding-top: 10vh; 
+    margin: 0 auto;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    /* font-family: 'Noto Sans', sans-serif; */
     -webkit-font-smoothing: antialiased; 
     background-color: var(--color-bg);
     color: var(--color-text);
+    padding-bottom: 80px;
+    margin-bottom: 0;
 }
 
 h1 {

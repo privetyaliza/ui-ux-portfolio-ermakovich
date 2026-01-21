@@ -1,19 +1,28 @@
 import React from 'react';
+import "../../styles/Footer.css";
 
-const Footer = () => {
-  const footerStyle = {
-    backgroundColor: '#f1f1f1',
-    padding: '2rem',
-    textAlign: 'center',
-    marginTop: 'auto', // Pushes it to the bottom
-    borderTop: '1px solid #ccc'
-  };
-
+export function Footer() {
   return (
-    <footer style={footerStyle}>
-      <p>© 2026 My Portfolio. Built with React & Vite.</p>
+    <footer className="footer-container">
+      {/* Left side: Get in touch */}
+      <div>
+        Get in touch →
+      </div>
+
+      {/* Right side: Email and LinkedIn */}
+      <nav className="nav-group">
+        <a href="mailto:your.email@example.com" className="nav-link">
+          Email
+        </a>
+        <a 
+          href="https://linkedin.com/in/yourprofile" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="nav-link"
+        >
+          LinkedIn
+        </a>
+      </nav>
     </footer>
   );
-};
-
-export default Footer;
+}

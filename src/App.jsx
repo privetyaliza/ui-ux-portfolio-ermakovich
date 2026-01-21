@@ -4,9 +4,9 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import './styles/index.css'; 
 
 // Import Components
-import Header from './components/layout/Header';
-import Footer from './components/layout/Footer';
-import Home from './pages/Home';
+import { Header } from './components/layout/Header';
+import { Footer } from './components/layout/Footer';
+import { Home } from './pages/Home';
 import HarvestProject from './pages/HarvestProject';
 
 function App() {

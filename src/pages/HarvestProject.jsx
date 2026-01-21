@@ -11,12 +11,13 @@ import '../styles/harvestLegacy.css';
 
 const HarvestProject = () => {
   return (
+  <main className="page-container">
    <div className="harvest-legacy">
     <div className='container-readable'>
       
     <div className="hero-section">
       <div className="hero-text">
-        <h1 className="hero-title">Haaaarvest</h1>
+        <h1 className="hero-title">Harvest</h1>
         <p className="hero-subtitle">A delivery app that makes seasonal & local eating effortless</p>
       </div>
       <img className="hero-image" src={HarvestImages.hero} alt="Hero image for Harvest project" />
@@ -28,7 +29,7 @@ const HarvestProject = () => {
         <Card 
           variant="transparent" 
           title="Disciplines" 
-          align="center" // <--- The new magic prop
+          align="center"
         >
           <div className="card-list">
             <div>Service Design</div>
@@ -975,6 +976,7 @@ const HarvestProject = () => {
 
     </div>
    </div>
+   </main>
   );
 };
 

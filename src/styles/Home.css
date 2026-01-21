@@ -1,0 +1,417 @@
+.home-wrapper {
+  flex: 1; 
+  background-color: #F0F8FF; 
+  color: #181818;
+  padding-top: 13vh;
+  padding-bottom: 80px;
+  width: 100%;
+  box-sizing: border-box;
+
+  /* ADD THIS: Ensures the wrapper centers its children */
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+/* Add any Home-specific styles below */
+.home-title {
+  font-size: 48px;
+  text-align: center;
+}
+
+.callout {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 24px;
+    border-radius: 12px;
+    /* width: 100%; Still 100% of its PARENT, which will now be the constrained container */
+    margin-bottom: 48px;
+    box-sizing: border-box;
+}
+
+/* New Variant: Development (Blue) */
+.callout-development {
+    background-color: #E3ECF5; /* Light blue background */
+}
+
+.callout-icon {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    display: block;
+    /* Optional: if your heart icon is a SVG font/path, you can color it here */
+}
+
+.callout-text {
+    font-size: 16px; /* Matching your nav-link size */
+    line-height: 1.5;
+    color: #181818; 
+    margin: 0;
+    flex: 1;
+}
+
+/* Styling the "here" link inside the callout */
+.callout-text a {
+    color: inherit;
+    text-decoration: underline;
+    transition: opacity 0.2s ease;
+}
+
+.callout-text a:hover {
+    opacity: 0.7;
+}
+
+.hero-grid {
+    display: grid;
+    /* This keeps the layout balanced */
+    grid-template-columns: 1.5fr 1fr; 
+    /* IMPORTANT: 'start' prevents the image from stretching the whole row */
+    align-items: start; 
+    gap: 60px;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.hero-text-content {
+    display: block;
+    /* This ensures the image wrapper knows how tall the text is */
+    position: relative; 
+}
+
+.hero-greeting {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #181818;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    color: #868686; 
+    margin-bottom: 48px;
+}
+
+.hero-description {
+    font-size: 24px;
+    line-height: 1.4;
+    margin-bottom: 48px;
+    max-width: 500px;
+}
+
+.text-highlight {
+    font-weight: 600; 
+}
+
+.text-highlight.research { color: #0762A0; } 
+.text-highlight.design { color: #0762A0; }   
+
+/* 1. Find this class in your main CSS block */
+.hero-image-wrapper {
+    /* "relative" allows the absolute child to position itself inside this box */
+    position: relative; 
+    
+    /* This ensures the wrapper fills the grid cell height defined by the text */
+    height: 100%; 
+    width: 100%;
+}
+
+.hero-profile-img {
+    position: absolute;
+    top: 0;
+    right: 0; /* Aligns image to the right */
+    
+    height: 100%; 
+    width: auto; 
+    
+    /* Ensures the image scales correctly within the box */
+    object-fit: contain; 
+    
+    border-radius: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.btn-primary {
+    background-color: #181818;
+    color: #ffffff;
+    padding: 16px 32px;
+    border-radius: 16px;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex; 
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s ease;
+    width: fit-content;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+/* @media (max-width: 991px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .hero-image-wrapper {
+        height: auto;
+        max-height: 350px;
+        margin-bottom: 32px;
+        justify-content: center;
+    }
+
+    .hero-description {
+        margin: 0 auto 48px;
+    }
+    
+    .hero-profile-img {
+        width: 100%;
+        max-width: 300px;
+    }
+} */
+
+/* --- Skills Section --- */
+
+.skills-section {
+    margin-top: 20vh;
+    margin-bottom: 20vh; /* Space before next section */
+    width: 100%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #181818;
+}
+
+/* Toggle Switch Styling */
+.skills-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #868686; /* Grey for inactive */
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.2s ease;
+}
+
+.toggle-btn.active {
+    color: #181818; /* Black for active */
+    font-weight: 600;
+}
+
+.toggle-btn:hover {
+    color: #181818;
+}
+
+/* Grid Layout */
+.skills-grid {
+    display: grid;
+    /* CHANGE: 2 columns creates the 2x2 layout for 4 items */
+    grid-template-columns: repeat(2, 1fr); 
+    
+    /* Spacing */
+    column-gap: 80px; /* Space between Left and Right columns */
+    row-gap: 60px;    /* Space between Top and Bottom rows */
+    
+    text-align: left;
+    
+    /* Center the grid itself so the 2 columns sit nicely in the middle */
+    max-width: 900px; 
+    margin: 0 auto;
+}
+
+.skill-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skill-category-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #181818;
+    margin: 0;
+}
+
+/* The "Wrap Figma Container" Logic */
+.skill-chips-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* This makes them stack if they run out of space */
+    gap: 12px;       /* Space between chips */
+    align-items: flex-start;
+}
+
+/* The Blue Box Chip */
+.skill-chip {
+    background-color: #E3ECF5; /* Light blue background matching screenshot */
+    color: #181818;
+    padding: 8px 16px;
+    border-radius: 8px; /* Soft corners */
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    white-space: nowrap; /* Prevents text inside a chip from breaking weirdly */
+}
+
+/* 1. The Container for the 3 Categories (Design, Collab, Coding) */
+.tools-grid {
+    display: grid;
+    /* This creates the 3 big columns side-by-side */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px;
+    text-align: left;
+    max-width: 1000px; 
+    margin: 0 auto;
+}
+
+.tool-column {
+    display: flex;
+    flex-direction: column;
+    /* This creates the vertical space between the title and the icons */
+    gap: 20px; 
+}
+
+/* 2. The Container for the Icons inside each category */
+.tool-icons-wrapper {
+    display: grid;
+    /* This forces the icons into rows of 3 */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 16px;
+    
+    /* Optional: keeps the grid tight around the icons */
+    width: fit-content; 
+}
+
+.tool-icon-placeholder {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* ADD THIS: Essential for positioning the tooltip */
+    position: relative; 
+    cursor: pointer; /* Shows the user it's interactive */
+}
+
+/* 2. Create the Tooltip style */
+.tool-tooltip {
+    /* Position */
+    position: absolute;
+    bottom: 100%; /* Sits right above the icon */
+    left: 50%;
+    transform: translateX(-50%) translateY(-8px); /* Centers it and moves it up slightly */
+    
+    /* Appearance */
+    background-color: #181818;
+    color: #ffffff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    
+    /* Animation State (Hidden) */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    pointer-events: none; /* Prevents glitching if mouse touches the tooltip */
+    
+    /* Optional: Add a little arrow pointing down */
+    z-index: 10;
+}
+
+/* 3. Show Tooltip on Hover */
+.tool-icon-placeholder:hover .tool-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-12px); /* Slides up slightly on hover */
+}
+
+/* 4. The Image styles */
+.tool-icon-img {
+    /* CHANGE: Fill the available space */
+    width: 100%;
+    height: 100%;
+    
+    /* Keep this to ensure they don't stretch weirdly */
+    object-fit: contain; 
+    
+    /* Optional: If you want the images themselves to have soft corners */
+    border-radius: 12px; 
+}
+
+/* Update the existing 991px block to include Tools */
+@media (max-width: 991px) {
+    /* --- Hero Section Mobile Styles --- */
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .hero-image-wrapper {
+        position: static; /* Stop absolute positioning */
+        height: auto;
+        max-height: 350px;
+        margin-bottom: 32px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-description {
+        margin: 0 auto 48px;
+    }
+    
+    .hero-profile-img {
+        position: static; /* Image behaves normally again */
+        height: auto;
+        width: 100%;
+        max-width: 300px;
+        align-self: center;
+    }
+
+    /* --- Skills Section Mobile Styles --- */
+    .skills-grid {
+        grid-template-columns: 1fr; /* Stack vertically */
+        gap: 40px;
+    }
+
+    /* --- Tools Section Mobile Styles (MOVED HERE) --- */
+    .tools-grid {
+        grid-template-columns: 1fr; 
+        gap: 60px;
+        /* CHANGE 1: Centers the text (like "Design & Prototyping") */
+        text-align: center; 
+    }
+
+    .tool-column {
+        /* CHANGE 2: Forces the inner elements (the icon wrapper) to center */
+        align-items: center; 
+    }
+    
+    .tool-icons-wrapper {
+        /* Keep this to ensure icons stay tight together */
+        width: fit-content; 
+        
+        /* CHANGE 3: Ensures the wrapper itself sits in the middle */
+        margin: 0 auto; 
+        
+        gap: 16px;
+    }
+}
