@@ -5,13 +5,13 @@
   "homepage": "https://privetyaliza.github.io/ui-ux-portfolio-ermakovich/",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "npm run build && cd dist && git init && git checkout -b gh-pages && git add -A && git commit -m 'deploy' && git push -f https://github.com/privetyaliza/ui-ux-portfolio-ermakovich.git gh-pages && cd .."
-  },
+  "dev": "vite",
+  "build": "vite build",
+  "lint": "eslint .",
+  "preview": "vite preview",
+  "predeploy": "npm run build",
+  "deploy": "npm run build && cd dist && git init && git checkout -B gh-pages && git add -A && git commit -m 'deploy' && git push -f https://github.com/privetyaliza/ui-ux-portfolio-ermakovich.git gh-pages && cd .."
+},
   "dependencies": {
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
