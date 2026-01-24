@@ -49,8 +49,9 @@
 import React from 'react';
 import '../styles/Home.css';
 import Callout from '../components/reusable/Callout';
-import HeroSection from '../components/home/HeroSection'; // Import the new component
+import HeroSection from '../components/home/HeroSection';
 import SkillsSection from '../components/home/SkillsSection';
+import CaseStudiesSection from '../components/home/CaseStudiesSection';
 
 export function Home() {
   return (
@@ -61,10 +62,11 @@ export function Home() {
           This portfolio website is still in development! To see the previous version, click <a href="https://privetyaliza.github.io/ui-ux-portfolio/" target="_blank" rel="noopener noreferrer">here</a> :)
         </Callout>
         
-        {/* The Hero Section is now self-contained */}
         <HeroSection />
 
         <SkillsSection />
+
+        <CaseStudiesSection />
         
       </div>
     </main>

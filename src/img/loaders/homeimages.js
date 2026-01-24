@@ -18,6 +18,9 @@ import sqlite from '../home/sqlite.svg';
 import teams from '../home/teams.svg';
 import trello from '../home/trello.svg';
 import vscode from '../home/vscode.svg';
+import harvest_snippet from '../home/harvest_snippet.png';
+import uniwaste_snippet from '../home/uniwaste_snippet.png';
+import harvest_snippet1 from '../home/harvest_snippet1.png';
 
 
 export const HomeImages = {
@@ -41,4 +44,7 @@ export const HomeImages = {
     teams: teams,
     trello: trello,
     vscode: vscode,
+    harvest_snippet: harvest_snippet,
+    uniwaste_snippet: uniwaste_snippet,
+    harvest_snippet1: harvest_snippet1,
 };    

@@ -12,7 +12,7 @@ export default function HeroSection() {
         
         <div className="hero-description">
           <p>
-            Curiosity and empathy guide how I 
+            Curiosity and empathy guide how <br />I 
             <span className="text-highlight research"> research</span>, 
             and creativity and systems thinking guide how I 
             <span className="text-highlight design"> design</span>.

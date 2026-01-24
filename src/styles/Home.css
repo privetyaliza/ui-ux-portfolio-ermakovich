@@ -7,18 +7,13 @@
   width: 100%;
   box-sizing: border-box;
 
-  /* ADD THIS: Ensures the wrapper centers its children */
+  /* Ensures the wrapper centers its children */
   display: flex;
   flex-direction: column;
   align-items: center; 
 }
 
-/* Add any Home-specific styles below */
-.home-title {
-  font-size: 48px;
-  text-align: center;
-}
-
+/* --- Callout Styles --- */
 .callout {
     display: flex;
     flex-direction: row;
@@ -26,14 +21,12 @@
     gap: 24px;
     padding: 24px;
     border-radius: 12px;
-    /* width: 100%; Still 100% of its PARENT, which will now be the constrained container */
     margin-bottom: 48px;
     box-sizing: border-box;
 }
 
-/* New Variant: Development (Blue) */
 .callout-development {
-    background-color: #E3ECF5; /* Light blue background */
+    background-color: #E3ECF5; 
 }
 
 .callout-icon {
@@ -41,18 +34,16 @@
     width: 22px;
     height: 22px;
     display: block;
-    /* Optional: if your heart icon is a SVG font/path, you can color it here */
 }
 
 .callout-text {
-    font-size: 16px; /* Matching your nav-link size */
+    font-size: 16px;
     line-height: 1.5;
     color: #181818; 
     margin: 0;
     flex: 1;
 }
 
-/* Styling the "here" link inside the callout */
 .callout-text a {
     color: inherit;
     text-decoration: underline;
@@ -63,11 +54,10 @@
     opacity: 0.7;
 }
 
+/* --- Hero Section --- */
 .hero-grid {
     display: grid;
-    /* This keeps the layout balanced */
     grid-template-columns: 1.5fr 1fr; 
-    /* IMPORTANT: 'start' prevents the image from stretching the whole row */
     align-items: start; 
     gap: 60px;
     margin-top: 40px;
@@ -76,7 +66,6 @@
 
 .hero-text-content {
     display: block;
-    /* This ensures the image wrapper knows how tall the text is */
     position: relative; 
 }
 
@@ -100,19 +89,12 @@
     max-width: 500px;
 }
 
-.text-highlight {
-    font-weight: 600; 
-}
-
+.text-highlight { font-weight: 600; }
 .text-highlight.research { color: #0762A0; } 
 .text-highlight.design { color: #0762A0; }   
 
-/* 1. Find this class in your main CSS block */
 .hero-image-wrapper {
-    /* "relative" allows the absolute child to position itself inside this box */
     position: relative; 
-    
-    /* This ensures the wrapper fills the grid cell height defined by the text */
     height: 100%; 
     width: 100%;
 }
@@ -120,14 +102,10 @@
 .hero-profile-img {
     position: absolute;
     top: 0;
-    right: 0; /* Aligns image to the right */
-    
+    right: 0; 
     height: 100%; 
     width: auto; 
-    
-    /* Ensures the image scales correctly within the box */
     object-fit: contain; 
-    
     border-radius: 40px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
@@ -152,34 +130,10 @@
     transform: translateY(-2px);
 }
 
-/* @media (max-width: 991px) {
-    .hero-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    
-    .hero-image-wrapper {
-        height: auto;
-        max-height: 350px;
-        margin-bottom: 32px;
-        justify-content: center;
-    }
-
-    .hero-description {
-        margin: 0 auto 48px;
-    }
-    
-    .hero-profile-img {
-        width: 100%;
-        max-width: 300px;
-    }
-} */
-
 /* --- Skills Section --- */
-
 .skills-section {
     margin-top: 20vh;
-    margin-bottom: 20vh; /* Space before next section */
+    margin-bottom: 20vh;
     width: 100%;
     text-align: center;
 }
@@ -191,7 +145,6 @@
     color: #181818;
 }
 
-/* Toggle Switch Styling */
 .skills-toggle {
     display: flex;
     justify-content: center;
@@ -204,14 +157,14 @@
     border: none;
     font-size: 18px;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    color: #868686; /* Grey for inactive */
+    color: #868686;
     cursor: pointer;
     padding: 0;
     transition: color 0.2s ease;
 }
 
 .toggle-btn.active {
-    color: #181818; /* Black for active */
+    color: #181818; 
     font-weight: 600;
 }
 
@@ -219,20 +172,14 @@
     color: #181818;
 }
 
-/* Grid Layout */
+/* Skills Grid */
 .skills-grid {
     display: grid;
-    /* CHANGE: 2 columns creates the 2x2 layout for 4 items */
     grid-template-columns: repeat(2, 1fr); 
-    
-    /* Spacing */
-    column-gap: 80px; /* Space between Left and Right columns */
-    row-gap: 60px;    /* Space between Top and Bottom rows */
-    
+    column-gap: 80px; 
+    row-gap: 160px;    
     text-align: left;
-    
-    /* Center the grid itself so the 2 columns sit nicely in the middle */
-    max-width: 900px; 
+    max-width: 1000px; 
     margin: 0 auto;
 }
 
@@ -249,33 +196,34 @@
     margin: 0;
 }
 
-/* The "Wrap Figma Container" Logic */
 .skill-chips-wrapper {
     display: flex;
-    flex-wrap: wrap; /* This makes them stack if they run out of space */
-    gap: 12px;       /* Space between chips */
+    flex-wrap: wrap; 
+    gap: 12px;       
     align-items: flex-start;
 }
 
-/* The Blue Box Chip */
 .skill-chip {
-    background-color: #E3ECF5; /* Light blue background matching screenshot */
+    background-color: #E3ECF5; 
     color: #181818;
     padding: 8px 16px;
-    border-radius: 8px; /* Soft corners */
+    border-radius: 8px; 
     font-size: 14px;
     font-weight: 500;
     line-height: 1.4;
-    white-space: nowrap; /* Prevents text inside a chip from breaking weirdly */
+    white-space: nowrap; 
 }
 
-/* 1. The Container for the 3 Categories (Design, Collab, Coding) */
+/* --- Tools Grid --- */
 .tools-grid {
     display: grid;
-    /* This creates the 3 big columns side-by-side */
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 40px;
+    /* max-content shrinks the column width to fit the icons exactly */
+    grid-template-columns: repeat(3, max-content); 
+    /* Packs the 3 columns into the center of the screen */
+    justify-content: center; 
+    gap: 7vw;
     text-align: left;
+    width: 100%; 
     max-width: 1000px; 
     margin: 0 auto;
 }
@@ -283,18 +231,13 @@
 .tool-column {
     display: flex;
     flex-direction: column;
-    /* This creates the vertical space between the title and the icons */
     gap: 20px; 
 }
 
-/* 2. The Container for the Icons inside each category */
 .tool-icons-wrapper {
     display: grid;
-    /* This forces the icons into rows of 3 */
     grid-template-columns: repeat(3, 1fr); 
     gap: 16px;
-    
-    /* Optional: keeps the grid tight around the icons */
     width: fit-content; 
 }
 
@@ -304,21 +247,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    /* ADD THIS: Essential for positioning the tooltip */
     position: relative; 
-    cursor: pointer; /* Shows the user it's interactive */
+    cursor: pointer; 
 }
 
-/* 2. Create the Tooltip style */
+/* Tooltip Styles */
 .tool-tooltip {
-    /* Position */
     position: absolute;
-    bottom: 100%; /* Sits right above the icon */
+    bottom: 100%; 
     left: 50%;
-    transform: translateX(-50%) translateY(-8px); /* Centers it and moves it up slightly */
-    
-    /* Appearance */
+    transform: translateX(-50%) translateY(-8px); 
     background-color: #181818;
     color: #ffffff;
     padding: 6px 10px;
@@ -326,47 +264,134 @@
     font-size: 12px;
     font-weight: 600;
     white-space: nowrap;
-    
-    /* Animation State (Hidden) */
     opacity: 0;
     visibility: hidden;
     transition: all 0.2s ease;
-    pointer-events: none; /* Prevents glitching if mouse touches the tooltip */
-    
-    /* Optional: Add a little arrow pointing down */
+    pointer-events: none; 
     z-index: 10;
 }
 
-/* 3. Show Tooltip on Hover */
 .tool-icon-placeholder:hover .tool-tooltip {
     opacity: 1;
     visibility: visible;
-    transform: translateX(-50%) translateY(-12px); /* Slides up slightly on hover */
+    transform: translateX(-50%) translateY(-12px); 
 }
 
-/* 4. The Image styles */
 .tool-icon-img {
-    /* CHANGE: Fill the available space */
     width: 100%;
     height: 100%;
-    
-    /* Keep this to ensure they don't stretch weirdly */
     object-fit: contain; 
-    
-    /* Optional: If you want the images themselves to have soft corners */
     border-radius: 12px; 
 }
 
-/* Update the existing 991px block to include Tools */
+
+/* --- Case Studies Section --- */
+.case-studies-section {
+    margin-bottom: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+.case-studies-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 40px; 
+    margin-top: 96px;
+    text-align: left;
+}
+
+/* --- Project Card Styles --- */
+.project-card {
+    background-color: #ffffff; 
+    border-radius: 24px; 
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03); 
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+     box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+}
+
+.project-image-container {
+    height: 200px; 
+    background-color: #E8F1F8; 
+    border-radius: 24px 24px 0 0;
+    display: flex;
+    align-items: flex-end; 
+    justify-content: center;
+    position: relative;
+    z-index: 1; 
+}
+
+.project-devices-img {
+    width: auto;
+    max-width: 90%; 
+    max-height: 200%; 
+    object-fit: contain;
+    margin-bottom: -124px; /* Default overlap for Desktop */
+    transform: translateY(0); 
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.project-card:hover .project-devices-img {
+    transform: translateY(-30px); 
+}
+
+.project-text-content {
+    padding: 32px;
+    background-color: #ffffff;
+    border-radius: 0 0 24px 24px;
+    position: relative;
+    z-index: 2; 
+    flex-grow: 1; 
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.project-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    color: #181818;
+}
+
+.project-description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #525252;
+    margin: 0;
+}
+
+/* Coming Soon Variant */
+.coming-soon-card .project-image-container {
+    background-color: #E3ECF5; 
+    align-items: center; 
+    z-index: 1;
+}
+
+.coming-soon-placeholder h3 {
+    font-size: 40px; 
+    font-weight: 800;
+    /* color: #BCBCBC;  */
+    color: #0762A0; 
+    text-transform: uppercase;
+    margin: 0 32px; /* Adjusted side margin for safety */
+    text-align: center; 
+}
+
+
+/* --- CONSOLIDATED MOBILE STYLES (Fix #1) --- */
 @media (max-width: 991px) {
-    /* --- Hero Section Mobile Styles --- */
+    /* Hero */
     .hero-grid {
         grid-template-columns: 1fr;
         text-align: center;
     }
     
     .hero-image-wrapper {
-        position: static; /* Stop absolute positioning */
+        position: static; 
         height: auto;
         max-height: 350px;
         margin-bottom: 32px;
@@ -379,39 +404,57 @@
     }
     
     .hero-profile-img {
-        position: static; /* Image behaves normally again */
+        position: static; 
         height: auto;
         width: 100%;
         max-width: 300px;
         align-self: center;
     }
 
-    /* --- Skills Section Mobile Styles --- */
+    /* Skills */
     .skills-grid {
-        grid-template-columns: 1fr; /* Stack vertically */
+        grid-template-columns: 1fr; 
         gap: 40px;
     }
 
-    /* --- Tools Section Mobile Styles (MOVED HERE) --- */
+    /* Tools */
     .tools-grid {
         grid-template-columns: 1fr; 
         gap: 60px;
-        /* CHANGE 1: Centers the text (like "Design & Prototyping") */
         text-align: center; 
+        /* Fix #3: Ensure items center in the single column */
+        justify-items: center;
     }
 
     .tool-column {
-        /* CHANGE 2: Forces the inner elements (the icon wrapper) to center */
         align-items: center; 
     }
     
     .tool-icons-wrapper {
-        /* Keep this to ensure icons stay tight together */
         width: fit-content; 
-        
-        /* CHANGE 3: Ensures the wrapper itself sits in the middle */
         margin: 0 auto; 
-        
         gap: 16px;
+    }
+
+    /* Case Studies (Fix #2: Moved here from 768px so tablets don't break) */
+    .case-studies-grid {
+        grid-template-columns: 1fr;
+        gap: 15vh;
+        margin-top: 15vh;
+    }
+    
+    .project-image-container {
+        height: 180px; 
+    }
+
+    /* Fix #3: Adjust negative margin for the smaller container on mobile */
+    .project-devices-img {
+        margin-bottom: -110px; /* Slightly less overlap for shorter container */
+    }
+
+    /* Adjust coming soon text for smaller screens */
+    .coming-soon-placeholder h3 {
+        font-size: 32px;
+        margin: 0 16px;
     }
 }
