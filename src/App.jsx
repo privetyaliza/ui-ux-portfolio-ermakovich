@@ -8,10 +8,13 @@ import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
 import { Home } from './pages/Home';
 import HarvestProject from './pages/HarvestProject';
+import ScrollManager from './components/layout/ScrollManager';
 
 function App() {
   return (
     <Router>
+      <ScrollManager />
+      
       <Header />
       
       <main className="content-area">

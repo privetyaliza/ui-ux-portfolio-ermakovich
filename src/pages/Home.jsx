@@ -47,6 +47,7 @@
 
 
 import React from 'react';
+// We removed useLocation and useEffect because ScrollManager handles it now
 import '../styles/Home.css';
 import Callout from '../components/reusable/Callout';
 import HeroSection from '../components/home/HeroSection';
@@ -54,6 +55,8 @@ import SkillsSection from '../components/home/SkillsSection';
 import CaseStudiesSection from '../components/home/CaseStudiesSection';
 
 export function Home() {
+  // NO useEffect or useLocation needed here!
+  
   return (
     <main className="home-wrapper">
       <div className="container-readable">

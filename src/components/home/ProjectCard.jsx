@@ -1,13 +1,16 @@
+// src/components/home/ProjectCard.jsx
+import React from 'react';
+import { Link } from 'react-router-dom'; // 1. Import Link
+
 export default function ProjectCard({ project }) {
-  // 1. Extract the new 'bgColor' property
-  const { title, description, image, status, bgColor } = project;
+  // 2. Extract 'path' from the project data
+  const { title, description, image, status, bgColor, path } = project;
 
   const isComingSoon = status === 'coming-soon';
 
-  return (
-    <div className={`project-card ${isComingSoon ? 'coming-soon-card' : ''}`}>
-      
-      {/* 2. Apply the color here using the 'style' attribute */}
+  // 3. Define the inner content (Image + Text) so we don't have to copy-paste it twice
+  const cardContent = (
+    <>
       <div 
         className="project-image-container"
         style={{ backgroundColor: bgColor }} 
@@ -25,7 +28,22 @@ export default function ProjectCard({ project }) {
         <h3 className="project-title">{title}</h3>
         <p className="project-description">{description}</p>
       </div>
-      
-    </div>
+    </>
+  );
+
+  // 4. LOGIC: If it's "Coming Soon", return a regular DIV (not clickable)
+  if (isComingSoon) {
+    return (
+      <div className="project-card coming-soon-card">
+        {cardContent}
+      </div>
+    );
+  }
+
+  // 5. If it's ready, return a LINK (clickable)
+  return (
+    <Link to={path} className="project-card">
+      {cardContent}
+    </Link>
   );
 }

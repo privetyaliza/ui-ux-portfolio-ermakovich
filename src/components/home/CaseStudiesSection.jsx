@@ -14,7 +14,8 @@ const projectsData = [
     description: "A delivery app that makes seasonal & local eating effortless",
     image: HomeImages.harvest_snippet1,
     status: "ready",
-    bgColor: "#FFF7E4"
+    bgColor: "#FFF7E4",
+    path: "/harvest"
   },
   {
     id: 2,
@@ -45,7 +46,7 @@ const projectsData = [
 
 export default function CaseStudiesSection() {
   return (
-    <section className="case-studies-section">
+    <section className="case-studies-section" id="case-studies">
       <h2 className="section-title">Case studies</h2>
       
       <div className="case-studies-grid">
