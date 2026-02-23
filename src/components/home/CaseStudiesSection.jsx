@@ -23,7 +23,8 @@ const projectsData = [
     description: "A project focused on reducing food waste through a campus-sharing platform",
     image: HomeImages.uniwaste_snippet,
     status: "ready",
-    bgColor: "#C4E3FF"
+    bgColor: "#C4E3FF",
+    path: "/uniwaste"
   },
   {
     id: 3,
@@ -48,6 +49,7 @@ export default function CaseStudiesSection() {
   return (
     <section className="case-studies-section" id="case-studies">
       <h2 className="section-title">Case studies</h2>
+      {/* <h2 className="section-title">Here's what I have done</h2> */}
       
       <div className="case-studies-grid">
         {projectsData.map((project) => (

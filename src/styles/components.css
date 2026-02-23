@@ -1,0 +1,113 @@
+/* ==========================================================================
+   1. SIDEBAR LAYOUT TRACK
+   ========================================================================== */
+
+.harvest-content-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.sidebar-track {
+  position: absolute;
+  top: 200px;
+  bottom: 0;
+  left: 0; 
+  width: 200px;
+  pointer-events: none; 
+}
+
+/* ==========================================================================
+   2. SIDEBAR BASE CONTAINER
+   ========================================================================== */
+
+.simple-side-nav {
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 180px;
+  border-radius: 8px;
+  padding: 16px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  z-index: 90;
+}
+
+.sidebar-track .simple-side-nav {
+  pointer-events: auto; 
+  left: 20px; 
+}
+
+/* ==========================================================================
+   3. BULLETPROOF TITLE & LINKS (Overrides legacy CSS)
+   ========================================================================== */
+
+.harvest-legacy .simple-side-nav-title {
+  margin: 0 0 8px 0 !important;
+  padding-top: 16px !important;     
+  padding-left: 16px !important;    
+  padding-right: 16px !important;
+  padding-bottom: 8px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #5a4a3a !important;
+  letter-spacing: 0.5px !important;
+  text-transform: uppercase !important;
+}
+
+.harvest-legacy .simple-side-nav-list,
+.harvest-legacy .simple-side-nav ul {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.harvest-legacy .simple-side-nav li {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.harvest-legacy .simple-side-nav-link,
+.harvest-legacy .simple-side-nav a {
+  display: block !important;
+  width: 100% !important;
+  text-align: left !important;
+  padding: 8px 16px !important;
+  border: none !important;
+  background: none !important;
+  font-size: 14px !important;
+  color: #5a4a3a !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  border-left: 3px solid transparent !important;
+  text-decoration: none !important;
+  line-height: 1.2 !important;
+}
+
+.harvest-legacy .simple-side-nav-link:hover,
+.harvest-legacy .simple-side-nav a:hover {
+  background-color: #f0ece5 !important;
+  color: #2c3e2c !important;
+}
+
+.harvest-legacy .simple-side-nav-link.active,
+.harvest-legacy .simple-side-nav a.active {
+  background-color: #e8e0d5 !important;
+  border-left-color: #8b9a6e !important;
+  font-weight: 500 !important;
+  color: #2c3e2c !important;
+}
+
+/* Indent the sub-links so they look like a nested list */
+.harvest-legacy .simple-side-nav .sub-link {
+  padding-left: 32px !important;
+  font-size: 13px !important;
+}
+
+/* ==========================================================================
+   4. MOBILE RESPONSIVENESS
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .simple-side-nav {
+    display: none !important;
+  }
+}

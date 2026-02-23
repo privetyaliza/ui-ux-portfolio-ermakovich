@@ -5,7 +5,7 @@ import { HomeImages } from "../../img/loaders/homeimages";
 const skillsData = [
   {
     category: "Research",
-    items: ["Interviewing", "Workshops", "Quantitative Data Analysis", "Survey Design", "Desk Research", "Competitor Analysis"]
+    items: ["Interviews", "Workshops", "Qualitative Research", "Quantitative Data Analysis", "Survey Design", "Desk Research", "Competitor Analysis"]
   },
   {
     category: "Design",
@@ -86,7 +86,7 @@ export default function SkillsSection() {
 
   return (
     <section className="skills-section">
-      <h2 className="section-title">What I Can Do</h2>
+      <h2 className="section-title">Here's what I can do:</h2>
       
       {/* Toggle Switch */}
       <div className="skills-toggle">

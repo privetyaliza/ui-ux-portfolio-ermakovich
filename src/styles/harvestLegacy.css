@@ -19,6 +19,7 @@
     --color-arrow: #B0BE98;
 
     /* Font Sizes */
+    /* --fs-16: 0.825rem; */
     --fs-16: 0.825rem;
     --fs-24: 1rem;
     --fs-32: 1.25rem;
@@ -53,8 +54,8 @@
     min-height: 100vh; 
     padding-top: 10vh; 
     margin: 0 auto;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    /* font-family: 'Noto Sans', sans-serif; */
+    /* font-family: 'Plus Jakarta Sans', sans-serif; */
+    font-family: 'DM Sans', sans-serif;
     -webkit-font-smoothing: antialiased; 
     background-color: var(--color-bg);
     color: var(--color-text);
