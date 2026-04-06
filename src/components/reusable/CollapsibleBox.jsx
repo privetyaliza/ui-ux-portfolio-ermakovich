@@ -1,3 +1,6 @@
+// Vybe Heart Icons
+import iconHeartPurple from '../../img/vybe/icon_purple_heart.svg';
+import iconHeartLime from '../../img/vybe/icon_lime_heart.svg';
 import React, { useState } from 'react';
 
 // Heart Icons
@@ -22,17 +25,27 @@ export default function CollapsibleBox({
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
+
   // 1. Determine classes based on type
-  const variantClass = type === 'sustainability' 
-    ? 'collapsible-sustainability' 
-    : 'collapsible-insight';
+  let variantClass = 'collapsible-insight';
+  let heartIcon = iconHeartBrown;
+  let arrowRight = iconArrowRightBrown;
+  let arrowDown = iconArrowDownBrown;
 
-  // 2. Determine Heart Icon based on type
-  const heartIcon = type === 'sustainability' ? iconHeartGreen : iconHeartBrown;
-
-  // 3. Determine Arrow Set based on type (Green set vs Brown set)
-  const arrowRight = type === 'sustainability' ? iconArrowRightGreen : iconArrowRightBrown;
-  const arrowDown = type === 'sustainability' ? iconArrowDownGreen : iconArrowDownBrown;
+  if (type === 'sustainability') {
+    variantClass = 'collapsible-sustainability';
+    heartIcon = iconHeartGreen;
+    arrowRight = iconArrowRightGreen;
+    arrowDown = iconArrowDownGreen;
+  } else if (type === 'purple') {
+    variantClass = 'collapsible-purple';
+    heartIcon = iconHeartPurple;
+    // Use brown arrows for now, unless custom lime arrows are added
+  } else if (type === 'lime') {
+    variantClass = 'collapsible-lime';
+    heartIcon = iconHeartLime;
+    // Use brown arrows for now, unless custom lime arrows are added
+  }
 
   // 4. Pick the specific arrow based on open/closed state
   const currentArrow = isOpen ? arrowDown : arrowRight;
@@ -50,6 +63,7 @@ export default function CollapsibleBox({
             src={heartIcon} 
             alt="Heart Icon" 
             className="collapsible-icon" 
+            key={heartIcon}
           />
           <h2 className="collapsible-title">{title}</h2>
         </div>

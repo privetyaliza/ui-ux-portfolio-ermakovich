@@ -296,7 +296,8 @@
 .case-studies-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
-    gap: 40px; 
+    column-gap: 40px;
+    row-gap: 80px; 
     margin-top: 96px;
     text-align: left;
 }

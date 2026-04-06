@@ -1,0 +1,59 @@
+/* =============================================================================
+   HARVEST THEME
+   Earthy, warm palette for the Harvest case study.
+
+   Usage:
+     import './project-base.css';
+     import './theme-harvest.css';
+     <div class="project-page theme-harvest">
+   ============================================================================= */
+
+.theme-harvest {
+  & {
+    /* --- Colors --- */
+    --color-bg: #FFFCFA;
+    --color-text: #252525;
+    --color-img-text: #696969;
+    --color-text-muted: #696969;
+
+    --color-callout-bg-sustainability: #EAF1E8;
+    --color-callout-bg-insight: #F9F4E8;
+    --color-callout-heart-sustainability: #77B256;
+    --color-callout-heart-insight: #B9644B;
+
+    --color-card-green: #B0BE98;
+    --color-card-beige: #F5F2ED;
+    /* --color-card-border-transparent: rgba(0, 0, 0, 0.1); */
+    --color-arrow: #B0BE98;
+
+    /* --- Typography --- */
+    --font-family: 'DM Sans', sans-serif;
+    --lh-body: 1.5;
+
+    /* --- Shadows --- */
+    --shadow-10: -10px -10px 40px -20px rgba(0, 0, 0, 10%), 10px 10px 40px -20px rgba(0, 0, 0, 10%);
+    --shadow-15: -10px -10px 40px -20px rgba(0, 0, 0, 15%), 10px 10px 40px -20px rgba(0, 0, 0, 15%);
+    --shadow-25: -10px -10px 40px -20px rgba(0, 0, 0, 25%), 10px 10px 40px -20px rgba(0, 0, 0, 25%);
+
+    /* --- Spacing --- */
+    --space-section: 64px;
+    --space-subsection: 24px;
+    --space-item: 16px;
+    --space-tight: 0px;
+
+    /* --- Buttons --- */
+    --btn-primary-bg: var(--color-card-green);
+    --btn-primary-text: var(--color-text);
+    --btn-border-width: 2px;
+
+    /* --- Sidebar --- */
+    --sidebar-bg: #FEFCF9;
+    --sidebar-title-color: #5a4a3a;
+    --sidebar-link-color: #5a4a3a;
+    --sidebar-link-hover-bg: #f0ece5;
+    --sidebar-link-hover-color: #2c3e2c;
+    --sidebar-link-active-bg: #e8e0d5;
+    --sidebar-link-active-border: #8b9a6e;
+    --sidebar-link-active-color: #2c3e2c;
+  }
+}

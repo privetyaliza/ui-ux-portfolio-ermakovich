@@ -9,8 +9,17 @@ import { HomeImages } from "../../img/loaders/homeimages";
 // --- DATA: CASE STUDIES ---
 const projectsData = [
   {
+    id: 0,
+    title: "Yle Vybe App",
+    description: "A music discovery app powered by Yle's journalism",
+    image: HomeImages.vybe_snippet,
+    status: "ready",
+    bgColor: "#a9f1f9",
+    path: "/vybe"
+  },
+  {
     id: 1,
-    title: "Harvest Mobile App",
+    title: "Harvest App",
     description: "A delivery app that makes seasonal & local eating effortless",
     image: HomeImages.harvest_snippet1,
     status: "ready",
@@ -24,7 +33,7 @@ const projectsData = [
     image: HomeImages.uniwaste_snippet,
     status: "ready",
     bgColor: "#C4E3FF",
-    path: "/uniwaste"
+    // path: "/uniwaste"
   },
   {
     id: 3,
@@ -34,14 +43,6 @@ const projectsData = [
     status: "coming-soon",
     // bgColor: "#F0E8F8"
   },
-  {
-    id: 4,
-    title: "Coming soon",
-    description: "The design is loading...",
-    image: null,
-    status: "coming-soon",
-    // bgColor: "#F0E8F8"
-  }
 ];
 
 

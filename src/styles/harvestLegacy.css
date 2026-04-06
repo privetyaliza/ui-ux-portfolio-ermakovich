@@ -467,7 +467,7 @@ a {
 
 .card-transparent {
   background-color: transparent;
-  border: 1px solid var(--color-text-light); /* Optional border for transparency */
+  border: 1px solid #77B256; /* Optional border for transparency */
   padding: 40px 0; /* Often transparent cards align flush with layout edges */
 }
 

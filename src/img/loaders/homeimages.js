@@ -21,6 +21,7 @@ import vscode from '../home/vscode.svg';
 import harvest_snippet from '../home/harvest_snippet.png';
 import uniwaste_snippet from '../home/uniwaste_snippet.png';
 import harvest_snippet1 from '../home/harvest_snippet1.png';
+import vybe_snippet from '../home/vybe_snippet.png';
 
 
 export const HomeImages = {
@@ -47,4 +48,5 @@ export const HomeImages = {
     harvest_snippet: harvest_snippet,
     uniwaste_snippet: uniwaste_snippet,
     harvest_snippet1: harvest_snippet1,
+    vybe_snippet: vybe_snippet,
 };    

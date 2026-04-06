@@ -7,10 +7,10 @@ import Button from '../components/reusable/Button';
 
 import { HarvestImages } from '../img/loaders/harvestimages';
 
-import '../styles/harvestLegacy.css';
+import '../styles/project-base.css';
+import '../styles/theme-harvest.css';
 
 import SideNavigation from '../components/reusable/SideNavigation';
-import '../styles/components.css';
 
 const HarvestProject = () => {
   const lowCarbonRef = useRef(null);
@@ -65,7 +65,7 @@ const HarvestProject = () => {
 
   return (
     <main className="page-container">
-      <div className="harvest-legacy">
+      <div className="project-page theme-harvest">
         
         {/* 1. HERO SECTION - Centered, no sidebar here */}
         <div className='container-readable'>
@@ -111,7 +111,7 @@ const HarvestProject = () => {
                   align="center" 
                 >
                   <div className="card-list">
-                    <div>Elizaveta Ermakovich</div>
+                    <div>Liza Ermakovich</div>
                     <div>Minnaleena Jaakkola</div>
                     <div>Ronja Teppo</div>
                   </div>
@@ -1042,7 +1042,7 @@ const HarvestProject = () => {
 
           </div> {/* End container-readable */}
         </div> {/* End harvest-content-wrapper */}
-      </div> {/* End harvest-legacy */}
+      </div> {/* End theme-harvest */}
     </main>
   );
 };

@@ -1,7 +1,9 @@
 import React from 'react';
 import iconBrown from '../../img/harvest/icon_brown_heart.svg';
 import iconGreen from '../../img/harvest/icon_green_heart.svg'; 
-import iconBlue from '../../img/home/icon_blue_heart.svg'; // Ensure this path is correct
+import iconBlue from '../../img/home/icon_blue_heart.svg';
+import iconPurple from '../../img/vybe/icon_purple_heart.svg';
+import iconLime from '../../img/vybe/icon_lime_heart.svg';
 
 export default function Callout({ type = 'sustainability', children }) {
   // Determine class based on type
@@ -14,6 +16,12 @@ export default function Callout({ type = 'sustainability', children }) {
   } else if (type === 'development') {
     variantClass = 'callout-development';
     iconSrc = iconBlue;
+  } else if (type === 'purple') {
+    variantClass = 'callout-purple';
+    iconSrc = iconPurple;
+  } else if (type === 'lime') {
+    variantClass = 'callout-lime';
+    iconSrc = iconLime;
   }
 
   return (

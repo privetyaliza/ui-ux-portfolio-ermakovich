@@ -1,0 +1,80 @@
+/* =============================================================================
+   UNIWASTE THEME
+   Clean, cool blue palette for the UniWaste case study.
+
+   Usage:
+     import './project-base.css';
+     import './theme-uniwaste.css';
+     <div class="project-page theme-uniwaste">
+   ============================================================================= */
+
+.theme-uniwaste {
+  & {
+    /* --- Colors --- */
+    --color-bg: #FFFFFF;
+    --color-text: #1A1A1A;
+    --color-img-text: #555555;
+    --color-text-muted: #555555;
+
+    --color-callout-bg-sustainability: #E3F2FD;
+    --color-callout-bg-insight: #F5F5F5;
+    --color-callout-heart-sustainability: #2196F3;
+    --color-callout-heart-insight: #616161;
+
+    --color-card-green: #C4E3FF;
+    --color-card-beige: #F4F6F8;
+    --color-card-border-transparent: #E0E0E0;
+    --color-arrow: #252525;
+
+    /* --- Typography --- */
+    --font-family: 'Plus Jakarta Sans', sans-serif;
+    --lh-body: 1.6;
+
+    /* --- Shadows (softer, cleaner feel) --- */
+    --shadow-10: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-15: 0 8px 30px rgba(0, 0, 0, 0.12);
+    --shadow-25: 0 12px 40px rgba(0, 0, 0, 0.15);
+
+    /* --- Spacing --- */
+    --space-section: 64px;
+    --space-subsection: 24px;
+    --space-item: 16px;
+    --space-tight: 8px;
+
+    /* --- Buttons (inverted: dark bg on light page) --- */
+    --btn-primary-bg: var(--color-text);
+    --btn-primary-text: #ffffff;
+    --btn-border-width: 2px;
+
+    /* --- Sidebar --- */
+    --sidebar-bg: #FAFCFF;
+    --sidebar-title-color: #1A1A1A;
+    --sidebar-link-color: #1A1A1A;
+    --sidebar-link-hover-bg: #E3F2FD;
+    --sidebar-link-hover-color: #1A1A1A;
+    --sidebar-link-active-bg: #C4E3FF;
+    --sidebar-link-active-border: #2196F3;
+    --sidebar-link-active-color: #1A1A1A;
+  }
+
+  /* --- UniWaste-specific overrides --- */
+
+  /* Hero has a colored rounded container */
+  .hero-section {
+    background-color: var(--color-card-green);
+    padding: 60px 20px;
+    border-radius: 24px;
+    gap: 32px;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-15);
+  }
+
+  .hero-subtitle { opacity: 0.8; }
+}
