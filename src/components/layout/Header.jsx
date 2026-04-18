@@ -1,8 +1,11 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState, useRef, useEffect } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 export function Header() {
   const location = useLocation();
+  const navigate = useNavigate();
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
   // 1. Helper Function: Handles scrolling even if URL is "stuck"
   const handleScroll = (id) => {
@@ -28,6 +31,44 @@ export function Header() {
     }
   };
 
+  // 3. Handle Case Studies button click
+  const handleCaseStudiesClick = () => {
+    if (isDropdownOpen) {
+      // If dropdown is open, close it and navigate to case studies section
+      setIsDropdownOpen(false);
+      if (location.pathname === '/') {
+        handleScroll('case-studies');
+      } else {
+        navigate('/#case-studies');
+      }
+    } else {
+      // If dropdown is closed, open it
+      setIsDropdownOpen(true);
+    }
+  };
+
+  // 4. Close dropdown when navigating
+  const handleCaseStudyClick = () => {
+    setIsDropdownOpen(false);
+  };
+
+  // 5. Click outside handler
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    if (isDropdownOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isDropdownOpen]);
+
   return (
     <header className="header-container">
       <Link 
@@ -39,14 +80,43 @@ export function Header() {
       </Link>
 
       <nav className="nav-group">
-        {/* 3. Add onClick to manually trigger scroll */}
-        <Link 
-          to="/#case-studies" 
-          className="nav-link"
-          onClick={() => handleScroll('case-studies')} 
-        >
-          Case studies
-        </Link>
+        {/* Case Studies Dropdown */}
+        <div className="dropdown-container" ref={dropdownRef}>
+          <button 
+            className="nav-link dropdown-trigger"
+            onClick={handleCaseStudiesClick}
+            aria-expanded={isDropdownOpen}
+            aria-label="Case studies menu"
+          >
+            Case studies
+          </button>
+          
+          {isDropdownOpen && (
+            <div className="dropdown-menu">
+              <Link 
+                to="/harvest" 
+                className="dropdown-item"
+                onClick={handleCaseStudyClick}
+              >
+                Harvest
+              </Link>
+              {/* <Link 
+                to="/uniwaste" 
+                className="dropdown-item"
+                onClick={handleCaseStudyClick}
+              >
+                UniWaste
+              </Link> */}
+              <Link 
+                to="/vybe" 
+                className="dropdown-item"
+                onClick={handleCaseStudyClick}
+              >
+                Yle Vybe
+              </Link>
+            </div>
+          )}
+        </div>
         
         <Link 
           to="/#contact" 

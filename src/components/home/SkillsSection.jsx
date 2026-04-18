@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { HomeImages } from "../../img/loaders/homeimages";
+import { VybeImages } from "../../img/loaders/vybeimages";
 
 // --- DATA: SKILLS ---
 const skillsData = [
@@ -29,8 +30,11 @@ const toolsData = [
       { name: "Figma", icon: HomeImages.figma },
       { name: "Adobe Illustrator", icon: HomeImages.ai },
       { name: "Adobe Photoshop", icon: HomeImages.ps },
+      { name: "Canva", icon: VybeImages.canva},
+      { name: "Loveable", icon: HomeImages.loveable },
+      { name: "Google Stitch", icon: VybeImages.stitch },
+      { name: "Figma Make", icon: VybeImages.make },
       { name: "Blender", icon: HomeImages.blender },
-      { name: "Loveable", icon: HomeImages.loveable }
     ] 
   },
   { 
@@ -39,9 +43,11 @@ const toolsData = [
       { name: "Miro", icon: HomeImages.miro },
       { name: "Notion", icon: HomeImages.notion },
       { name: "Teams", icon: HomeImages.teams },
+      { name: "Microsoft Sharepoint", icon: VybeImages.sharepoint },
       { name: "Mural", icon: HomeImages.mural },
       { name: "Trello", icon: HomeImages.trello },
-      { name: "FigJam", icon: HomeImages.figjam }
+      { name: "FigJam", icon: HomeImages.figjam },
+      { name: "Slack", icon: VybeImages.slack }
     ] 
   },
   { 
@@ -52,7 +58,9 @@ const toolsData = [
       { name: "VS Code", icon: HomeImages.vscode },
       { name: "Git", icon: HomeImages.git },
       { name: "JavaScript", icon: HomeImages.js },
-      { name: "SQLite", icon: HomeImages.sqlite }
+      { name: "HTML & CSS", icon: VybeImages.htmlcss },
+      { name: "SQLite", icon: HomeImages.sqlite },
+      { name: "Claude Code", icon: VybeImages.claude }
     ] 
   }
 ];

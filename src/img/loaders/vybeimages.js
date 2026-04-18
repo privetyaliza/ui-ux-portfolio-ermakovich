@@ -31,6 +31,10 @@ import iconArrowDownLime from '../../img/vybe/icon_down_opener_lime.svg';
 import iteration from '../../img/vybe/iteration.png';
 import hmw from '../../img/vybe/hmw.png';
 import crazy8s from '../../img/vybe/crazy8s.png';
+import canva from '../../img/vybe/canva.svg';
+import htmlcss from '../../img/vybe/htmlcss.svg';
+import slack from '../../img/vybe/slack.svg';
+import sharepoint from '../../img/vybe/sharepoint.svg';
 
 
 
@@ -68,4 +72,8 @@ export const VybeImages = {
     crazy8s: crazy8s,
     iconArrowRightLime: iconArrowRightLime,
     iconArrowDownLime: iconArrowDownLime,
+    canva: canva,
+    htmlcss: htmlcss,
+    slack: slack,
+    sharepoint: sharepoint
 };
