@@ -10,8 +10,8 @@
   "lint": "eslint .",
   "preview": "vite preview",
   "predeploy": "npm run build",
-  "deploy": "npm run build && cd dist && git init && git checkout -B gh-pages && git add -A && git commit -m 'deploy' && git push -f https://github.com/privetyaliza/ui-ux-portfolio-ermakovich.git gh-pages && cd .."
-},
+  "deploy": "npm run build && npx shx rm -rf dist/.git && cd dist && git init && git checkout -B gh-pages && git add -A && git commit -m 'deploy' && git push -f https://github.com/privetyaliza/ui-ux-portfolio-ermakovich.git gh-pages"
+  },
   "dependencies": {
     "react": "^19.2.0",
     "react-dom": "^19.2.0",

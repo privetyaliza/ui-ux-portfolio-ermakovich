@@ -82,7 +82,7 @@ const toolsData = [
 </div>
 
 export default function SkillsSection() {
-  const [activeTab, setActiveTab] = useState('skills'); 
+  const [activeTab, setActiveTab] = useState('tools'); 
 
   return (
     <section className="skills-section">
@@ -91,37 +91,21 @@ export default function SkillsSection() {
       {/* Toggle Switch */}
       <div className="skills-toggle">
         <button 
-          className={`toggle-btn ${activeTab === 'skills' ? 'active' : ''}`}
-          onClick={() => setActiveTab('skills')}
-        >
-          Skills
-        </button>
-        <button 
           className={`toggle-btn ${activeTab === 'tools' ? 'active' : ''}`}
           onClick={() => setActiveTab('tools')}
         >
           Tools
         </button>
+        <button 
+          className={`toggle-btn ${activeTab === 'skills' ? 'active' : ''}`}
+          onClick={() => setActiveTab('skills')}
+        >
+          Skills
+        </button>
       </div>
 
       {/* CONDITIONAL RENDERING */}
-      {activeTab === 'skills' ? (
-        
-        /* 1. SKILLS LAYOUT (2x2 Grid) */
-        <div className="skills-grid">
-          {skillsData.map((group, index) => (
-            <div key={index} className="skill-column">
-              <h3 className="skill-category-title">{group.category}</h3>
-              <div className="skill-chips-wrapper">
-                {group.items.map((item, idx) => (
-                  <span key={idx} className="skill-chip">{item}</span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-
-      ) : (
+      {activeTab === 'tools' ? (
         <div className="tools-grid">
         {toolsData.map((group, index) => (
             <div key={index} className="tool-column">
@@ -141,6 +125,22 @@ export default function SkillsSection() {
             </div>
             </div>
         ))}
+        </div>
+
+      ) : (
+        
+        /* 1. SKILLS LAYOUT (2x2 Grid) */
+        <div className="skills-grid">
+          {skillsData.map((group, index) => (
+            <div key={index} className="skill-column">
+              <h3 className="skill-category-title">{group.category}</h3>
+              <div className="skill-chips-wrapper">
+                {group.items.map((item, idx) => (
+                  <span key={idx} className="skill-chip">{item}</span>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
 
       )}

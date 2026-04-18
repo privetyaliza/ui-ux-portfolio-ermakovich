@@ -17,6 +17,9 @@ import iconArrowDownBrown from '../../img/harvest/icon_down_opener_brown.svg';
 import iconArrowRightGreen from '../../img/harvest/icon_right_opener_green.svg';
 import iconArrowDownGreen from '../../img/harvest/icon_down_opener_green.svg';
 
+import iconArrowRightLime from '../../img/vybe/icon_right_opener_lime.svg';
+import iconArrowDownLime from '../../img/vybe/icon_down_opener_lime.svg';
+
 export default function CollapsibleBox({ 
   type = 'insight', // Default to 'insight' (Brown)
   title = "Expandable Section", 
@@ -44,6 +47,8 @@ export default function CollapsibleBox({
   } else if (type === 'lime') {
     variantClass = 'collapsible-lime';
     heartIcon = iconHeartLime;
+    arrowRight = iconArrowRightLime;
+    arrowDown = iconArrowDownLime;
     // Use brown arrows for now, unless custom lime arrows are added
   }
 

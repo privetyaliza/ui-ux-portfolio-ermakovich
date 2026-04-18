@@ -1,0 +1,26 @@
+
+.edit-highlight {
+  background: repeating-linear-gradient(135deg, #302b4c 0 10px, #302b4c 10px 20px);
+  border: 2px dashed #ffd700;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 12px 0;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.edit-highlight::before {
+  content: "EDIT ME";
+  position: absolute;
+  top: -14px;
+  left: 12px;
+  background: #5a5a8a;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 6px 6px 6px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+  z-index: 3;
+}
