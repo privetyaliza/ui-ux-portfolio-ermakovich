@@ -141,4 +141,12 @@ body.yle-vybe-active .header-container .nav-link:active {
   .btn-primary:hover { filter: brightness(1.1); box-shadow: none; }
   .btn-secondary     { border: 1px solid var(--color-accent-primary); color: var(--color-accent-primary); }
   .btn-secondary:hover { background-color: var(--color-accent-primary); color: #0A0A0F; }
+
+  mark {
+  background-color: rgba(180, 158, 247, 0.15);  /* Lime green at 25% opacity */
+  color: inherit;                              /* Preserves original text color */
+  padding: 0 3px;                              /* Slight padding for better readability */
+  border-radius: 4px;                          /* Subtle rounded corners */
+  transition: background-color 0.2s ease;
+  }
 }

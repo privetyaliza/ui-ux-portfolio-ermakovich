@@ -56,4 +56,20 @@
     --sidebar-link-active-border: #8b9a6e;
     --sidebar-link-active-color: #2c3e2c;
   }
+
+  mark {
+  background-color: #eadcc3;  /* Warm, earthy ochre - like dried hay/sunlight on wheat */
+  color: inherit;              /* Preserves original text color */
+  padding: 0 2px;             /* Slight padding for better readability */
+  border-radius: 3px;         /* Subtle rounded corners */
+  transition: background-color 0.2s ease;
+  }
+
+  .mark-green {
+  background-color: #9dad85;
+  }
+
+.mark-light-green {
+  background-color: #c8d9b9;
+  }
 }
